@@ -14,7 +14,18 @@
 
   export default {
     name: "UserDetails",
-    props: ['login', 'followers', 'following', 'bio', 'email', 'avatar_url']
+    components: {RepoDetail, UserCard},
+    computed: {
+      ...mapGetters({
+        user: 'getUser',
+        repos: 'getRepos',
+        loading: 'getLoading'
+      })
+    },
+    created() {
+      this.$store.dispatch('fetchUser', this.$route.params.user)
+      this.$store.dispatch('fetchRepos', this.$route.params.user)
+    }
   }
 </script>
 
