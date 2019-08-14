@@ -6,7 +6,7 @@
                 forget to help the community! ;)</p>
             <hr class="my-4">
             <Input/>
-            <UserDetails :user="{...user}"/>
+            <UserDetails :user="user"/>
         </div>
     </div>
 </template>
