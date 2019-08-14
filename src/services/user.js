@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const searchUser = async user => await axios.get(
-  `https://developer.github.com/v3/${user}`, {
+  `https://api.github.com/users/${user}`, {
     timeout: 10000,
   },
 )
