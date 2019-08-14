@@ -16,7 +16,11 @@ export default new Vuex.Store({
       return state.user
     },
     getRepos: state => {
-      return state.repos
+      return [...state.repos].sort((repo1, repo2) => {
+        if (repo1.stargazers_count > repo2.stargazers_count){return -1}
+        if (repo1.stargazers_count < repo2.stargazers_count){return 1}
+        return 0
+      })
     },
     getLoading: state => {
       return state.loading
