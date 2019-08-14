@@ -47,6 +47,13 @@ export default new Vuex.Store({
     }
   },
   actions: {
-
+    fetchUser({commit}, login) {
+      const user = searchUser(login)
+      commit('FETCH_USER', user)
+    },
+    fetchRepos({commit}, login) {
+      const repos = searchUserRepo(login)
+      commit('FETCH_REPOS', repos)
+    }
   }
 })
