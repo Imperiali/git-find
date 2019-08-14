@@ -24,7 +24,7 @@
 <script>
 
   export default {
-    name: "UserDetails",
+    name: "UserCard",
     props: ['user'],
     methods: {
       toRepositories(){
