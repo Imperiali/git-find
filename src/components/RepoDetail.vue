@@ -3,8 +3,7 @@
         <li class="list-group-item d-flex justify-content-between align-items-center">
             <ul class="list-group list-group-horizontal-md">
                 <li class="list-group-item"><a :href="repo.url" class=""> {{repo.name}} </a></li>
-                <li class="list-group-item">{{repo.private}}</li>
-                <li class="list-group-item">{{repo.description}}</li>
+                <li class="list-group-item" v-if="repo.description">{{repo.description}}</li>
             </ul>
             <span class="badge badge-primary badge-pill">{{repo.stargazers_count}}</span>
         </li>
