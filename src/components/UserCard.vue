@@ -22,15 +22,10 @@
 </template>
 
 <script>
-  import user from '../../tests/mock/mock-user'
 
   export default {
     name: "UserDetails",
-    data() {
-      return {
-        user
-      }
-    },
+    props: ['user'],
     methods: {
       toRepositories(){
         this.$router.push({ name: 'user', params: { user: this.user.login, ...this.user } })
