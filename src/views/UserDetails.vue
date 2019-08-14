@@ -1,6 +1,9 @@
 <template>
     <div class="user-details">
-        {{login}} {{ followers }} {{ following}}{{ bio}} {{email}} {{avatar_url}}
+        <UserCard :user="user"/>
+        <div class="" v-for="repo in repos" :key="repo.id">
+            <RepoDetail :repo="repo"/>
+        </div>
     </div>
 </template>
 
