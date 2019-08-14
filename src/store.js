@@ -23,7 +23,28 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-
+    FETCH_REPOS(state, payload){
+      state.loading = true
+      payload.then(response => {
+        state.loading = false
+        if (response.status === 200){
+          state.repos = response.data
+        } else {
+          state.repos = ''
+        }
+      })
+    },
+    FETCH_USER(state, payload) {
+      state.loading = true
+      payload.then(response => {
+        state.loading = false
+        if (response.status === 200){
+          state.user = response.data
+        } else {
+          state.user = ''
+        }
+      })
+    }
   },
   actions: {
 
