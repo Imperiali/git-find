@@ -15,7 +15,6 @@
 
 <script>
   // @ is an alias to /src
-  import user from '../../tests/mock/mock-user'
 
   import Input from "../components/Input";
   import UserDetails from "../components/UserCard";
