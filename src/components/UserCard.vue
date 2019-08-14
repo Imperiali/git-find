@@ -26,9 +26,14 @@
 
   export default {
     name: "UserDetails",
-    data(){
+    data() {
       return {
         user
+      }
+    },
+    methods: {
+      toRepositories(){
+        this.$router.push({ name: 'user', params: { user: this.user.login, ...this.user } })
       }
     }
   }
