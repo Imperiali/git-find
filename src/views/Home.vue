@@ -24,11 +24,12 @@
 
   export default {
     name: 'home',
-    components: {UserDetails, Input},
-    data() {
-      return {
-        user
-      }
+    components: {NoUser, Loading, UserCard, Input},
+    computed: {
+      ...mapGetters({
+        user: 'getUser',
+        loading: 'getLoading'
+      })
     },
   }
 </script>
