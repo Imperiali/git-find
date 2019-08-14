@@ -1,7 +1,9 @@
 <template>
-    <nav class="navbar navbar-light bg-light">
-        <a href="/" class="navbar-brand">Git Find</a>
-    </nav>
+    <v-app-bar flat short class="elevation-1">
+        <v-toolbar-title>
+            <a href="/" class="text-primary" >Git Find</a>
+        </v-toolbar-title>
+    </v-app-bar>
 </template>
 
 <script>

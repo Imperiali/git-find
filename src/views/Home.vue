@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <v-container class="home">
         <div class="jumbotron">
             <h1 class="display-4">Hey, welcome!</h1>
             <p class="lead">This is a simple github users search! Type down and find some users and there repos! Don't
@@ -10,7 +10,7 @@
             <UserCard v-if="user && !loading" :user="user"/>
             <NoUser v-if="!user && !loading"/>
         </div>
-    </div>
+    </v-container>
 </template>
 
 <script>
