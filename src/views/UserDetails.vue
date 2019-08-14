@@ -1,10 +1,11 @@
 <template>
-    <div class="user-details">
+    <v-container class="user-details">
         <UserCard :user="user"/>
-        <div class="" v-for="repo in repos" :key="repo.id">
+        <Loading v-if="!repos"/>
+        <div v-else class="" v-for="repo in repos" :key="repo.id">
             <RepoDetail :repo="repo"/>
         </div>
-    </div>
+    </v-container>
 </template>
 
 <script>
