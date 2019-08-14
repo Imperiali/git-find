@@ -17,7 +17,10 @@
   // @ is an alias to /src
 
   import Input from "../components/Input";
-  import UserDetails from "../components/UserCard";
+  import UserCard from "../components/UserCard";
+  import {mapGetters} from "vuex";
+  import Loading from "../components/Loading";
+  import NoUser from "../components/NoUser";
 
   export default {
     name: 'home',
