@@ -20,7 +20,15 @@
   import {mapActions} from 'vuex';
 
   export default {
-    name: "Input"
+    name: "Input",
+    data() {
+      return {
+        userLogin: ''
+      }
+    },
+    methods: {
+      ...mapActions(['fetchUser'])
+    }
   }
 </script>
 
