@@ -11,6 +11,17 @@ export default new Vuex.Store({
     repos: "",
     loading: false
   },
+  getters: {
+    getUser: state => {
+      return state.user
+    },
+    getRepos: state => {
+      return state.repos
+    },
+    getLoading: state => {
+      return state.loading
+    }
+  },
   mutations: {
 
   },
