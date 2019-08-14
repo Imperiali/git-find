@@ -6,7 +6,9 @@
                 forget to help the community! ;)</p>
             <hr class="my-4">
             <Input/>
-            <UserDetails :user="user"/>
+            <Loading v-if="loading"/>
+            <UserCard v-if="user && !loading" :user="user"/>
+            <NoUser v-if="!user && !loading"/>
         </div>
     </div>
 </template>
