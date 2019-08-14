@@ -14,7 +14,7 @@
                     <span class="badge badge-secondary">{{user.followers}} Followers</span> |
                     <span class="badge badge-secondary">Following {{user.following}}</span>
                     <p class="card-text">{{user.bio}}</p>
-                    <router-link btn btn-primary :to="user.login" tag="a">Go to repositories!</router-link>
+                    <a class="btn btn-primary" @click="toRepositories">Go to repositories!</a>
                 </div>
             </div>
         </div>
