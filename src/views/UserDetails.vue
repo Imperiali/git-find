@@ -8,6 +8,10 @@
 </template>
 
 <script>
+  import UserCard from "../components/UserCard";
+  import {mapGetters} from "vuex";
+  import RepoDetail from "../components/RepoDetail";
+
   export default {
     name: "UserDetails",
     props: ['login', 'followers', 'following', 'bio', 'email', 'avatar_url']
