@@ -17,10 +17,8 @@ export default new Router({
       path: '/:user',
       name: 'user',
       props: true,
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/UserDetails.vue')
+      // eslint-disable-next-line
+      component: () => import('./views/UserDetails.vue')
     }
   ]
 })
