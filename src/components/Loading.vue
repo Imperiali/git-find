@@ -1,9 +1,11 @@
 <template>
-    <div class="d-flex justify-content-center">
-        <div class="spinner-border text-primary" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
+    <v-row justify="center">
+        <v-progress-circular
+                indeterminate
+                size="120"
+                color="light-blue"
+        ></v-progress-circular>
+    </v-row>
 </template>
 
 <script>
