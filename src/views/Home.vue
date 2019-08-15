@@ -1,15 +1,13 @@
 <template>
     <v-container class="home">
-        <div class="jumbotron">
-            <h1 class="display-4">Hey, welcome!</h1>
-            <p class="lead">This is a simple github users search! Type down and find some users and there repos! Don't
-                forget to help the community! ;)</p>
-            <hr class="my-4">
-            <Input/>
-            <Loading v-if="loading"/>
-            <UserCard v-if="user && !loading" :user="user"/>
-            <NoUser v-if="!user && !loading"/>
-        </div>
+        <h1 class="display-3">Hey, welcome!</h1>
+        <p class="">This is a simple github users search! Type down and find some users and there repos! Don't
+            forget to help the community! ;)</p>
+        <v-divider/>
+        <Input/>
+        <Loading v-if="loading"/>
+        <UserCard v-if="user && !loading" :user="user"/>
+        <NoUser v-if="!user && !loading"/>
     </v-container>
 </template>
 
