@@ -1,9 +1,7 @@
 <template>
-    <div class="card">
-        <div class="card-body">
-            No user find yet...
-        </div>
-    </div>
+    <v-banner >
+        No user find yet...
+    </v-banner>
 </template>
 
 <script>
