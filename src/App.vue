@@ -10,7 +10,7 @@
 <style lang="scss">
 </style>
 <script>
-  import Navbar from "./components/molecules/Navbar";
+  import Navbar from "./components/molecules/GF-navbar/index";
 
   export default {
     components: {Navbar}

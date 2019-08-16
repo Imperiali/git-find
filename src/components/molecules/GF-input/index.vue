@@ -14,10 +14,10 @@
 
 <script>
   import {mapActions} from 'vuex';
-  import GFBtn from "../atoms/GF-btn/index";
+  import GFBtn from "../../atoms/GF-btn/index";
 
   export default {
-    name: "Input",
+    name: "GF-Input",
     components: {GFBtn},
     data() {
       return {

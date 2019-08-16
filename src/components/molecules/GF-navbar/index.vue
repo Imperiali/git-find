@@ -7,9 +7,9 @@
 </template>
 
 <script>
-  import GFLink from "../atoms/GF-link/index";
+  import GFLink from "../../atoms/GF-link/index";
   export default {
-    name: "Navbar",
+    name: "GF-navbar",
     components: {GFLink}
   }
 </script>
