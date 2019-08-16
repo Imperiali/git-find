@@ -5,7 +5,7 @@
             forget to help the community! ;)</p>
         <v-divider/>
         <Input/>
-        <Loading v-if="loading"/>
+        <GFLoading v-if="loading"/>
         <UserCard v-if="user && !loading" :user="user"/>
         <NoUser v-if="!user && !loading"/>
     </v-container>
@@ -14,15 +14,15 @@
 <script>
   // @ is an alias to /src
 
-  import Input from "../components/Input";
-  import UserCard from "../components/UserCard";
+  import Input from "../components/molecules/Input";
+  import UserCard from "../components/molecules/UserCard";
   import {mapGetters} from "vuex";
-  import Loading from "../components/Loading";
-  import NoUser from "../components/NoUser";
+  import GFLoading from "../components/atoms/GF-Loading";
+  import NoUser from "../components/atoms/NoUser";
 
   export default {
     name: 'home',
-    components: {NoUser, Loading, UserCard, Input},
+    components: {NoUser, GFLoading, UserCard, Input},
     computed: {
       ...mapGetters({
         user: 'getUser',
