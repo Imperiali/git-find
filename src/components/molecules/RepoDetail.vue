@@ -2,7 +2,7 @@
     <v-flex md5 class="ma-2">
         <v-card min-height="120">
             <v-card-title class="justify-space-between">
-                <GFLink :href="repo.html_url">{{repo.name}}</GFLink>
+                <GFLink :color="'primary--text'" :href="repo.html_url">{{repo.name}}</GFLink>
                 <v-chip outlined color="green">
                     <v-avatar left>
                         {{repo.stargazers_count}}
