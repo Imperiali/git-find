@@ -1,6 +1,6 @@
 <template>
-    <v-banner >
-        No user find yet...
+    <v-banner icon-color="primary" icon="mdi-alert-circle-outline">
+        No user found yet... Try imperiali ! :)
     </v-banner>
 </template>
 
