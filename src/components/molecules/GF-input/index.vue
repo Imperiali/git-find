@@ -25,7 +25,8 @@
       }
     },
     methods: {
-      ...mapActions(['fetchUser'])
+      ...mapActions('user',
+        ['fetchUser'])
     }
   }
 </script>
