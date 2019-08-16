@@ -9,8 +9,8 @@
 </template>
 
 <script>
+  import {mapActions, mapGetters} from "vuex";
   import UserCard from "../components/molecules/UserCard/index";
-  import {mapGetters} from "vuex";
   import RepoDetail from "../components/molecules/RepoDetail/index";
 
   export default {
@@ -18,17 +18,27 @@
     components: {RepoDetail, UserCard},
     computed: {
       ...mapGetters({
-        user: 'getUser',
-        repos: 'getRepos',
+        user: 'user/getUser',
+        repos: 'repo/getRepos',
+      }),
+      ...mapGetters({
         loading: 'getLoading'
       })
     },
+    methods: {
+      ...mapActions('user', [
+        'fetchUser'
+      ]),
+      ...mapActions('repo', [
+        'fetchRepos'
+      ])
+    },
     created() {
       // Get the user by route params
-      this.$store.dispatch('fetchUser', this.$route.params.user)
+      this.fetchUser(this.$route.params.user)
 
       // Get the user's repositories by route params
-      this.$store.dispatch('fetchRepos', this.$route.params.user)
+      this.fetchRepos(this.$route.params.user)
     }
   }
 </script>

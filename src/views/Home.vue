@@ -25,9 +25,12 @@
     components: {GFInput, NoUser, GFLoading, UserCard},
     computed: {
       ...mapGetters({
-        user: 'getUser',
+        user: 'user/getUser',
+      }),
+      ...mapGetters({
         loading: 'getLoading'
       })
+
     },
   }
 </script>
