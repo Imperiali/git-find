@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="fetchUser(userLogin)">
-        <v-text-field v-model="userLogin">
+        <v-text-field placeholder="insert a github user!" v-model="userLogin" color="primary">
             <v-icon slot="prepend" color="green">@</v-icon>
             <GFBtn @click="fetchUser(userLogin)"
                    :slot="'append'"
