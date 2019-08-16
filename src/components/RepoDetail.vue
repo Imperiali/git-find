@@ -1,13 +1,20 @@
 <template>
-    <ul class="list-group">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            <ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item"><a target="_blank" :href="repo.html_url" class=""> {{repo.name}} </a></li>
-                <li class="list-group-item" v-if="repo.description">{{repo.description}}</li>
-            </ul>
-            <span class="badge badge-primary badge-pill">{{repo.stargazers_count}}</span>
-        </li>
-    </ul>
+    <v-flex md5 class="ma-2">
+        <v-card min-height="120">
+            <v-card-title class="justify-space-between">
+                <a :href="repo.html_url">{{repo.name}}</a>
+                <v-chip outlined color="green">
+                    <v-avatar left>
+                        {{repo.stargazers_count}}
+                    </v-avatar>
+                    Stars
+                </v-chip>
+            </v-card-title>
+            <v-card-text v-if="repo.description">
+                {{repo.description}}
+            </v-card-text>
+        </v-card>
+    </v-flex>
 </template>
 
 <script>
