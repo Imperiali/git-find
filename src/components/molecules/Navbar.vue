@@ -1,14 +1,16 @@
 <template>
     <v-app-bar flat short class="elevation-1">
         <v-toolbar-title>
-            <a href="/" class="text-primary" >Git Find</a>
+            <GFLink :href="'/'" >Git Find</GFLink>
         </v-toolbar-title>
     </v-app-bar>
 </template>
 
 <script>
+  import GFLink from "../atoms/GF-link/index";
   export default {
-    name: "Navbar"
+    name: "Navbar",
+    components: {GFLink}
   }
 </script>
 

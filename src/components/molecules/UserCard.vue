@@ -13,7 +13,7 @@
             <v-card-text v-if="user.email" class="overline mb-4">{{user.email}}</v-card-text>
             <v-card-text v-else class="overline mb-4">No e-mail avaliable :(</v-card-text>
             <v-card-actions>
-                <v-btn @click="toRepositories">Go to repositories!</v-btn>
+                <GFBtn @click="toRepositories">Go to repositories!</GFBtn>
             </v-card-actions>
         </v-flex>
     </v-layout>
@@ -22,8 +22,10 @@
 
 <script>
 
+  import GFBtn from "../atoms/GF-btn/index";
   export default {
     name: "UserCard",
+    components: {GFBtn},
     props: ['user'],
     methods: {
       toRepositories() {
