@@ -9,9 +9,9 @@
 </template>
 
 <script>
-  import UserCard from "../components/molecules/UserCard";
+  import UserCard from "../components/molecules/UserCard/index";
   import {mapGetters} from "vuex";
-  import RepoDetail from "../components/molecules/RepoDetail";
+  import RepoDetail from "../components/molecules/RepoDetail/index";
 
   export default {
     name: "UserDetails",

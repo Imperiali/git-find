@@ -4,7 +4,7 @@
         <p class="">This is a simple github users search! Type down and find some users and there repos! Don't
             forget to help the community! ;)</p>
         <v-divider/>
-        <Input/>
+        <GFInput/>
         <GFLoading :color="'primary'" v-if="loading"/>
         <UserCard v-if="user && !loading" :user="user"/>
         <NoUser v-if="!user && !loading"/>
@@ -14,15 +14,15 @@
 <script>
   // @ is an alias to /src
 
-  import Input from "../components/molecules/Input";
-  import UserCard from "../components/molecules/UserCard";
+  import UserCard from "../components/molecules/UserCard/index";
   import {mapGetters} from "vuex";
-  import GFLoading from "../components/atoms/GF-Loading";
-  import NoUser from "../components/atoms/NoUser";
+  import GFLoading from "../components/atoms/GF-loading/index";
+  import NoUser from "../components/atoms/NoUser/index";
+  import GFInput from "../components/molecules/GF-input/index";
 
   export default {
     name: 'home',
-    components: {NoUser, GFLoading, UserCard, Input},
+    components: {GFInput, NoUser, GFLoading, UserCard},
     computed: {
       ...mapGetters({
         user: 'getUser',
