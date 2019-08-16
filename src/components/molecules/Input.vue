@@ -5,7 +5,7 @@
             <GFBtn @click="fetchUser(userLogin)"
                    :slot="'append'"
                    :outlined="true"
-                   :color="'green'">
+                   :color="'primary'">
                 Search
             </GFBtn>
         </v-text-field>
