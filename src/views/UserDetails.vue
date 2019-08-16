@@ -2,9 +2,9 @@
     <v-container class="user-details">
         <UserCard :user="user"/>
         <Loading v-if="!repos"/>
-        <div v-else class="" v-for="repo in repos" :key="repo.id">
-            <RepoDetail :repo="repo"/>
-        </div>
+        <v-layout wrap v-else class="justify-space-around">
+            <RepoDetail v-for="repo in repos" :key="repo.id" :repo="repo"/>
+        </v-layout>
     </v-container>
 </template>
 
