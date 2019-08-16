@@ -5,7 +5,7 @@
             forget to help the community! ;)</p>
         <v-divider/>
         <Input/>
-        <GFLoading v-if="loading"/>
+        <GFLoading :color="'primary'" v-if="loading"/>
         <UserCard v-if="user && !loading" :user="user"/>
         <NoUser v-if="!user && !loading"/>
     </v-container>
