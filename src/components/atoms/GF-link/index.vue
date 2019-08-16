@@ -1,6 +1,8 @@
 <template>
     <a :href="href" :class="color">
-        <slot></slot>
+        <slot>
+            <!-- The link text -->
+        </slot>
     </a>
 </template>
 

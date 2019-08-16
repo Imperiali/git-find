@@ -17,6 +17,7 @@ export default new Vuex.Store({
     },
     getRepos: state => {
       return [...state.repos].sort((repo1, repo2) => {
+        // Verify which repository has more stars
         if (repo1.stargazers_count > repo2.stargazers_count){return -1}
         if (repo1.stargazers_count < repo2.stargazers_count){return 1}
         return 0
@@ -28,6 +29,7 @@ export default new Vuex.Store({
   },
   mutations: {
     FETCH_REPOS(state, payload){
+      // Call service, return empty if something goes wrong, otherwise return the response data
       state.loading = true
       payload.then(response => {
         state.loading = false
@@ -39,6 +41,7 @@ export default new Vuex.Store({
       })
     },
     FETCH_USER(state, payload) {
+      // Call service, return empty if something goes wrong, otherwise return the response data
       state.loading = true
       payload.then(response => {
         state.loading = false

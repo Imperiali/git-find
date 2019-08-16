@@ -24,7 +24,10 @@
       })
     },
     created() {
+      // Get the user by route params
       this.$store.dispatch('fetchUser', this.$route.params.user)
+
+      // Get the user's repositories by route params
       this.$store.dispatch('fetchRepos', this.$route.params.user)
     }
   }

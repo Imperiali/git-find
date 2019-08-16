@@ -3,7 +3,9 @@
            :color="color"
            :outlined="outlined"
            :slot="append">
-        <slot></slot>
+        <slot>
+            <!-- The button text -->
+        </slot>
     </v-btn>
 </template>
 

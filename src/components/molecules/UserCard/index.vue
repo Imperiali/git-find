@@ -53,11 +53,13 @@
     props: ['user'],
     methods: {
       toRepositories() {
+        // Send to repositories page
         this.$router.push({name: 'user', params: {user: this.user.login, ...this.user}})
       }
     },
     computed: {
       showBtn(){
+        // Determinate if the button to repositories are displayed by the browser's pathname
         return location.pathname === '/'
       }
     }
