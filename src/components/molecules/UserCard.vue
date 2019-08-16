@@ -5,7 +5,7 @@
     >
     <v-layout wrap>
         <v-flex>
-            <v-img max-width="300" :src="user.avatar_url"/>
+            <v-img alt="github user avatar" max-width="300" :src="user.avatar_url"/>
         </v-flex>
         <v-flex>
             <v-card-title class="headline mb-1">{{user.login}}</v-card-title>
