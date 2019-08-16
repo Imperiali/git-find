@@ -3,25 +3,20 @@
             class="mx-auto"
             outlined
     >
-        <v-list-item three-line>
-            <v-list-item-avatar
-
-                    tile
-                    size="180"
-                    color="grey"
-            >
-                <v-img :src="user.avatar_url"/>
-            </v-list-item-avatar>
-            <v-list-item-content>
-                <div v-if="user.email" class="overline mb-4">{{user.email}}</div>
-                <div v-else class="overline mb-4">No e-mail avaliable :(</div>
-                <v-list-item-title class="headline mb-1">{{user.login}}</v-list-item-title>
-                <v-list-item-subtitle>{{user.bio}}</v-list-item-subtitle>
-            </v-list-item-content>
-            <v-card-actions >
+    <v-layout wrap>
+        <v-flex>
+            <v-img max-width="300" :src="user.avatar_url"/>
+        </v-flex>
+        <v-flex>
+            <v-card-title class="headline mb-1">{{user.login}}</v-card-title>
+            <v-card-text>{{user.bio}}</v-card-text>
+            <v-card-text v-if="user.email" class="overline mb-4">{{user.email}}</v-card-text>
+            <v-card-text v-else class="overline mb-4">No e-mail avaliable :(</v-card-text>
+            <v-card-actions>
                 <v-btn @click="toRepositories">Go to repositories!</v-btn>
             </v-card-actions>
-        </v-list-item>
+        </v-flex>
+    </v-layout>
     </v-card>
 </template>
 
