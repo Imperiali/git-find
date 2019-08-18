@@ -1,7 +1,7 @@
 <template>
-    <v-app-bar flat short class="elevation-1">
+    <v-app-bar flat short class="primary elevation-1">
         <v-toolbar-title>
-            <GFLink :color="'primary--text'" :href="'/'" >Git Find</GFLink>
+            <GFLink :color="'white--text'" :href="'/'" >Git Find</GFLink>
         </v-toolbar-title>
     </v-app-bar>
 </template>
