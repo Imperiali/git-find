@@ -69,3 +69,7 @@ npm run lint
 ```
 npm run test:unit
 ```
+
+> Done is better than perfect, just can't be done badly
+>
+>___Feito é melhor que perfeito, só não pode ser mal feito___
