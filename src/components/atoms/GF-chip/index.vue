@@ -1,13 +1,11 @@
 <template>
     <v-chip
             :outlined="outlined"
-            :color="color">
-        <v-avatar
-                left>
-            <slot name="avatar">
-                <!-- The first element, maybe a icon, a word, but small thing -->
-            </slot>
-        </v-avatar>
+            :color="color"
+            class="justify-space-between align-content-center">
+        <slot name="avatar">
+            <!-- The first element, maybe a icon, a word, but small thing -->
+        </slot>
         <slot name="description">
             <!-- A short description, a word, nothing too big -->
         </slot>
