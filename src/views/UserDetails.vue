@@ -1,7 +1,7 @@
 <template>
     <v-container class="user-details">
         <UserCard :user="user"/>
-        <Loading v-if="!repos"/>
+        <GFLoading :color="'primary'" v-if="loading"/>
         <v-layout wrap v-else class="justify-space-around">
             <RepoDetail v-for="repo in repos" :key="repo.id" :repo="repo"/>
         </v-layout>
@@ -12,10 +12,11 @@
   import {mapActions, mapGetters} from "vuex";
   import UserCard from "../components/molecules/UserCard/index";
   import RepoDetail from "../components/molecules/RepoDetail/index";
+  import GFLoading from "../components/atoms/GF-loading/index";
 
   export default {
     name: "UserDetails",
-    components: {RepoDetail, UserCard},
+    components: {GFLoading, RepoDetail, UserCard},
     computed: {
       ...mapGetters({
         user: 'user/getUser',
