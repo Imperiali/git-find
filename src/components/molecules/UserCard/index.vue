@@ -4,16 +4,16 @@
             outlined
     >
         <v-layout wrap>
-            <v-flex>
-                <v-img alt="github user avatar" max-width="300" :src="user.avatar_url"/>
+            <v-flex class="col-md-3 col-sm-3">
+                <v-img class="mx-auto" alt="github user avatar" max-width="300" :src="user.avatar_url"/>
             </v-flex>
-            <v-flex>
-                <v-card-title class="headline mb-1">
-                    <v-layout>
+            <v-flex class="col-md-9 col-sm-9">
+                <GFCardTitle>
+                    <template v-slot:title>
                         {{user.login}}
-                    </v-layout>
-                    <v-layout class="justify-end">
-                        <GFChip :color="'primary'">
+                    </template>
+                    <template v-slot:extra>
+                        <GFChip :color="'primary'" class="mr-1">
                             <template v-slot:avatar>
                                 {{user.followers}}
                             </template>
@@ -29,8 +29,8 @@
                                 Following
                             </template>
                         </GFChip>
-                    </v-layout>
-                </v-card-title>
+                    </template>
+                </GFCardTitle>
                 <v-card-text>{{user.bio}}</v-card-text>
                 <v-card-text v-if="user.email" class="overline mb-4">{{user.email}}</v-card-text>
                 <v-card-text v-else class="overline mb-4">No e-mail avaliable :(</v-card-text>
@@ -46,10 +46,11 @@
 
   import GFBtn from "../../atoms/GF-btn/index";
   import GFChip from "../../atoms/GF-chip/index";
+  import GFCardTitle from "../Gf-card-title/index";
 
   export default {
     name: "UserCard",
-    components: {GFChip, GFBtn},
+    components: {GFCardTitle, GFChip, GFBtn},
     props: ['user'],
     methods: {
       toRepositories() {
@@ -58,7 +59,7 @@
       }
     },
     computed: {
-      showBtn(){
+      showBtn() {
         // Determinate if the button to repositories are displayed by the browser's pathname
         return location.pathname === '/'
       }
