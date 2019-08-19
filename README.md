@@ -12,7 +12,7 @@ Make a web app that show some details of github users and display their reposito
 
 ## Routes :vertical_traffic_light:
 
-going to the [home](git-fing.firebaseapp.com)/{{User}} like this [exemple](git-fing.firebaseapp.com/imperiali) you can see the user's repositories!
+Going to the [home](www.git-find.firebaseapp.com)/{{User}} like this [exemple](www.git-find.firebaseapp.com/imperiali) you can see the user's repositories!
 
 ## Using :flashlight:
 
