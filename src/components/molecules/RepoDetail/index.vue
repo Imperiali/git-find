@@ -1,13 +1,19 @@
 <template>
     <v-flex md5 class="ma-2">
         <v-card min-height="120">
-            <v-card-title class="justify-space-between">
-                <GFLink :color="'primary--text'" :href="repo.html_url">{{repo.name}}</GFLink>
-                <GFChip :color="'primary'">
-                    <template v-slot:avatar>{{repo.stargazers_count}}</template>
-                    <template v-slot:description>Stars</template>
-                </GFChip>
-            </v-card-title>
+            <GFCardTitle>
+                <template v-slot:title>
+                    <GFLink class="" :color="'primary--text'" :href="repo.html_url">{{repo.name}}</GFLink>
+                </template>
+                <template v-slot:extra>
+                    <GFChip class="" :color="'primary'">
+                        <template v-slot:avatar>{{repo.stargazers_count}}</template>
+                        <template v-slot:description>
+                            <v-icon small>mdi-star</v-icon>
+                        </template>
+                    </GFChip>
+                </template>
+            </GFCardTitle>
             <v-card-text v-if="repo.description">
                 {{repo.description}}
             </v-card-text>
@@ -18,9 +24,11 @@
 <script>
   import GFLink from "../../atoms/GF-link/index";
   import GFChip from "../../atoms/GF-chip/index";
+  import GFCardTitle from "../Gf-card-title/index";
+
   export default {
     name: "RepoDetail",
-    components: {GFChip, GFLink},
+    components: {GFCardTitle, GFChip, GFLink},
     props: ['repo']
   }
 </script>
