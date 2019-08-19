@@ -1,4 +1,4 @@
-import {searchUserRepo} from "../../services/repos";
+import {searchUserRepo} from "../../../services/repos";
 
 export const state = {
   repos: ''

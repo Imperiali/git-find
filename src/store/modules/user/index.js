@@ -1,4 +1,4 @@
-import {searchUser} from "../../services/user";
+import {searchUser} from "../../../services/user";
 
 export const state = {
   user: ''
