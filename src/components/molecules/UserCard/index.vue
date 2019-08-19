@@ -1,6 +1,6 @@
 <template>
     <v-card
-            class="mx-auto"
+            class="mx-auto card-main"
             outlined
     >
         <v-layout wrap>
@@ -35,7 +35,7 @@
                 <v-card-text v-if="user.email" class="overline mb-4">{{user.email}}</v-card-text>
                 <v-card-text v-else class="overline mb-4">No e-mail avaliable :(</v-card-text>
                 <v-card-actions v-if="showBtn">
-                    <GFBtn :color="'primary'" :outlined="true" @click="toRepositories">Repositories!</GFBtn>
+                    <GFBtn :block="true" :color="'primary'" :outlined="true" @click="toRepositories">Repositories!</GFBtn>
                 </v-card-actions>
             </v-flex>
         </v-layout>
@@ -67,6 +67,13 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .card-main {
+
+        .card-avatar {
+
+        }
+    }
+
 
 </style>
