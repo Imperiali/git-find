@@ -6,7 +6,7 @@
                     <GFLink class="" :color="'primary--text'" :href="repo.html_url">{{repo.name}}</GFLink>
                 </template>
                 <template v-slot:extra>
-                    <GFChip class="" :color="'primary'">
+                    <GFChip :color="'primary'">
                         <template v-slot:avatar>{{repo.stargazers_count}}</template>
                         <template v-slot:description>
                             <v-icon small>mdi-star</v-icon>
