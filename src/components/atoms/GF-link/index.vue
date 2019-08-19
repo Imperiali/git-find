@@ -1,5 +1,5 @@
 <template>
-    <a :href="href" :class="color">
+    <a :target="target" :href="href" :class="color">
         <slot>
             <!-- The link text -->
         </slot>
@@ -9,7 +9,7 @@
 <script>
   export default {
     name: "GF-link",
-    props: ['href', 'color']
+    props: ['href', 'color', 'target']
   }
 </script>
 
