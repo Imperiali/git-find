@@ -1,14 +1,20 @@
 <template>
     <form @submit.prevent="fetchUser(userLogin)">
-        <v-text-field placeholder="insert a github user!" v-model="userLogin" color="primary">
-            <v-icon slot="prepend" color="green">@</v-icon>
-            <GFBtn @click="fetchUser(userLogin)"
-                   :slot="'append'"
-                   :outlined="true"
-                   :color="'primary'">
-                Search
-            </GFBtn>
-        </v-text-field>
+        <v-layout class="align-center">
+            <v-flex class="col-10">
+                <v-text-field placeholder="insert a github user!" v-model="userLogin" color="primary">
+                    <v-icon slot="prepend" color="green">@</v-icon>
+                </v-text-field>
+            </v-flex>
+            <v-flex class="col-2 mb-2">
+                <GFBtn @click="fetchUser(userLogin)"
+                       :slot="'append'"
+                       :outlined="true"
+                       :color="'primary'">
+                    Search
+                </GFBtn>
+            </v-flex>
+        </v-layout>
     </form>
 </template>
 
