@@ -1,6 +1,6 @@
 <template>
     <v-card
-            class="mx-auto card-main"
+            class="mx-auto"
             outlined
     >
         <v-layout wrap>
@@ -67,13 +67,6 @@
   }
 </script>
 
-<style scoped lang="scss">
-    .card-main {
-
-        .card-avatar {
-
-        }
-    }
-
+<style scoped>
 
 </style>
