@@ -35,7 +35,7 @@
                 <v-card-text v-if="user.email" class="overline mb-4">{{user.email}}</v-card-text>
                 <v-card-text v-else class="overline mb-4">No e-mail avaliable :(</v-card-text>
                 <v-card-actions v-if="showBtn">
-                    <GFBtn :color="'primary'" :outlined="true" @click="toRepositories">Go to repositories!</GFBtn>
+                    <GFBtn :color="'primary'" :outlined="true" @click="toRepositories">Repositories!</GFBtn>
                 </v-card-actions>
             </v-flex>
         </v-layout>
