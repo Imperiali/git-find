@@ -3,7 +3,7 @@
         <v-card min-height="120">
             <GFCardTitle>
                 <template v-slot:title>
-                    <GFLink class="" :color="'primary--text'" :href="repo.html_url">{{repo.name}}</GFLink>
+                    <GFLink :target="'_blank'" class="" :color="'primary--text'" :href="repo.html_url">{{repo.name}}</GFLink>
                 </template>
                 <template v-slot:extra>
                     <GFChip :color="'primary'">
