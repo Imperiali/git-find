@@ -64,12 +64,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Run your unit tests :white_check_mark:
-```
-npm run test:unit
-```
-
-> Done is better than perfect, just can't be done badly
->
->___Feito é melhor que perfeito, só não pode ser mal feito___
